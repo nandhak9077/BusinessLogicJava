@@ -1,0 +1,18 @@
+import java.util.Scanner;
+
+class seven
+{
+	public static void main(String[] args) 
+	{
+		Scanner s = new Scanner(System.in);
+		int[] a = new int[10]; 
+		System.out.println("Enter the elements of the arra : ");
+		for(int i=0;i<a.length;i++)
+		{
+			a[i] = s.nextInt();
+		}
+		System.out.print("The entered array is : ");
+		
+		
+	}
+}

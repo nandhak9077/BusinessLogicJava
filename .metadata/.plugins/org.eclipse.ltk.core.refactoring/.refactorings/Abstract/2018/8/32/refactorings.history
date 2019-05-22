@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename local variable &apos;sh&apos; in &apos;Main.main(...)&apos; to &apos;shh&apos;&#x0D;&#x0A;- Original project: &apos;Abstract&apos;&#x0D;&#x0A;- Original element: &apos;Main.main(String[]).sh&apos;&#x0D;&#x0A;- Renamed element: &apos;sh&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename local variable &apos;sh&apos;" id="org.eclipse.jdt.ui.rename.local.variable" input="/src&lt;{Main.java[Main~main~\[QString;@sh!100!108!106!107!QShape;!0!false" name="shh" references="true" stamp="1533884564936" version="1.0"/>
+</session>

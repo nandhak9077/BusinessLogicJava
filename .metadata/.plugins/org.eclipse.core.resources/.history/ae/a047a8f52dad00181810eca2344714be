@@ -1,0 +1,32 @@
+import java.util.Scanner;
+public class HisTry {
+	public boolean strongNumber(int x)
+	{
+do
+{
+	int sum=0,fact=0;
+	int r=x%10;
+	for(int i=1;i<=r;i++)
+	{
+	fact=fact*i;
+	}
+	sum=sum+fact;
+	x=x/10;
+}while(x!=0);	
+
+}
+	
+	public static void main(String[] args) {
+		
+		Scanner s = new Scanner(System.in);
+		System.out.println("Enter the number=");
+		int n = s.nextInt();
+		HisTry h = new HisTry();
+		boolean b=h.strongNumber(n);
+		if(b==true)
+			System.out.println("Strongest number is"+n);
+		else
+			System.out.println("Not strongest number"+n);
+	}
+	}
+

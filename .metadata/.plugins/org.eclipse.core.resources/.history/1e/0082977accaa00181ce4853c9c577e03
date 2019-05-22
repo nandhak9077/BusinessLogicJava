@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+class seven
+{
+	public static void main(String[] args) 
+	{
+		Scanner s = new Scanner(System.in);
+		int[] count = new int[26];
+		System.out.print("Enter the string : ");
+		String st = s.nextLine();
+		char[] c = st.toCharArray();
+		for(int i=0;i<c.length;i++)
+			System.out.print(c[i]+" ");
+		
+		for(int i=0;i<c.length;i++)
+		{
+			if(c[i]!=0)
+			{
+				count[c[i]]++;
+			}
+		}
+		s.close();
+	}
+}

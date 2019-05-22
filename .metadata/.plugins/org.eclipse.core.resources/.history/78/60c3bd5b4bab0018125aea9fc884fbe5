@@ -1,0 +1,40 @@
+import java.util.Scanner;
+
+public class StringWordSearch 
+{
+	private static boolean checkWord(String st, String word)
+	{
+		char[] c1 = st.toCharArray();
+		char[] c2 = word.toCharArray();
+		for(int i=0;i<c1.length;i++)
+		{
+			int k=i;
+			int j=0;
+			while(k<c1.length&&j<c2.length&&c1[k]==c2[j])
+			{
+				k++;
+				j++;
+			}
+			if(j==c2.length&&(i==0||c1[i-1]==' ')&&(k==c1.length||c1[k]==' '))
+			{
+				return true;
+			}
+		}
+		return false;
+	}
+	
+	public static void main(String[] args) 
+	{
+		Scanner s = new Scanner(System.in);
+		System.out.println("Enterb the string : ");
+		String st = s.nextLine();
+		System.out.println("Enter the word : ");
+		String word = s.next();
+		boolean r = checkWord(st,word);
+		if(r)
+			System.out.println("Word is present");
+		else
+			System.out.println("Word is not present");
+		s.close();
+	}
+}

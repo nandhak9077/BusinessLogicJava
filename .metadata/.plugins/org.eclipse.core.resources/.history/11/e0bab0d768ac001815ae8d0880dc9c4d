@@ -1,0 +1,64 @@
+import java.util.Scanner;
+
+public class TicTacToe 
+{
+	public static void main(String[] args) 
+	{
+		Scanner s = new Scanner(System.in);
+		String[][] a = new String[3][3];
+		
+		System.out.println("Welcome to tic tac toe!!");
+
+		boolean r1 = false;
+		
+		System.out.println("Player 1's turn, Enter the position :");
+		int pos = s.nextInt();
+		
+		System.out.println("Enter the value O or X");
+		String c = s.next();
+		switch(pos)
+		{
+		case 1 : a[0][0] = c;
+		break;
+		case 2 : a[0][1] = c;
+		break;
+		case 3 : a[0][2] = c;
+		break;
+		case 4 : a[1][0] = c;
+		break;
+		case 5 : a[1][1] = c;
+		break;
+		case 6 : a[1][2] = c;
+		break;
+		case 7 : a[2][0] = c;
+		break;
+		case 8 : a[2][1] = c;
+		break;
+		case 9 : a[2][2] = c;
+		break;
+		default : System.out.println("Enter the value within 0-9 ");
+		}
+		
+		for(int i=0;i<a.length;i++)
+		{
+			for(int j=0;j<a[i].length;j++)
+			{
+				while(a[i][j]!=null)
+				{
+					if(a[i][j]=="o" || a[i][j]=="x")
+						r1 = true;
+				}
+			}
+		}
+		System.out.println("row 1");
+		
+		for(int i=0;i<a.length;i++)
+		{
+			for(int j=0;j<a[i].length;j++)
+			{
+				System.out.print(a[i][j]+" ");
+			}
+			System.out.println();
+		}
+	}
+}

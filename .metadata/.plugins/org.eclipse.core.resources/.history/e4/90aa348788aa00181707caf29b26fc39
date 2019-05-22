@@ -1,0 +1,107 @@
+import java.util.Scanner;
+
+public class SubString 
+{
+	private static int checkCount(String st,String su)
+	{
+		int count=0;
+		char[] c1 = st.toCharArray();
+		char[] c2 = su.toCharArray();
+		for(int i=0;i<c1.length;i++)
+		{
+			int j=0;
+			int k=i;
+			while(j<c2.length && k<c1.length && c2[j]==c1[k])
+			{
+				j++;
+				k++;
+			}
+			if(j==c2.length)
+				count++;
+		}
+		
+		return count;
+	}
+	
+	private static int checkIndex(String st,String su)
+	{
+		char[] c1 = st.toCharArray();
+		char[] c2 = su.toCharArray();
+		for(int i=0;i<c1.length;i++)
+		{
+			int j=0;
+			int k=i;
+			while(j<c2.length && k<c1.length && c2[j]==c1[k])
+			{
+				j++;
+				k++;
+			}
+			if(j==c2.length)
+				return i;
+		}
+		
+		return -1;
+	}
+	
+	private static int checkLastIndex(String st,String su)
+	{
+		char[] c1 = st.toCharArray();
+		char[] c2 = su.toCharArray();
+		int index = -1;
+		for(int i=0;i<c1.length;i++)
+		{
+			int j=0;
+			int k=i;
+			while(j<c2.length && k<c1.length && c2[j]==c1[k])
+			{
+				j++;
+				k++;
+			}
+			if(j==c2.length)
+				index = i;
+		}
+		
+		return i;
+	}
+	
+	private static boolean check(String st,String su)
+	{
+		char[] c1 = st.toCharArray();
+		char[] c2 = su.toCharArray();
+		for(int i=0;i<c1.length;i++)
+		{
+			int j=0;
+			int k=i;
+			while(j<c2.length && k<c1.length && c2[j]==c1[k])
+			{
+				j++;
+				k++;
+			}
+			if(j==c2.length)
+				return true;
+		}
+		
+		return false;
+	}
+	
+	public static void main(String[] args) 
+	{
+		Scanner s = new Scanner(System.in);
+		System.out.print("Enter the main string : ");
+		String st = s.nextLine();
+		System.out.print("Enter the sub string : ");
+		String su = s.nextLine();
+		boolean r = check(st,su);
+		if(r)
+			System.out.println("The sub string "+su+" is present in string "+ st);
+		else
+			System.out.println("The sub string "+su+" isn't present in string "+ st);
+		int r1 = checkIndex(st,su);
+		System.out.println("The index is : "+r1);
+		int r2 = checkCount(st,su);
+		System.out.println("The count is : "+r2);
+		s.close();
+			
+	}
+
+}

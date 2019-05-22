@@ -1,0 +1,4 @@
+class Idli 
+{
+	int quantity;
+}

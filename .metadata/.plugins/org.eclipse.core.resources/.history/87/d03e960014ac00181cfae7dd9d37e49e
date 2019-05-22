@@ -1,0 +1,55 @@
+import java.util.Scanner;
+
+public class Matrix 
+{
+	Scanner s  = new Scanner(System.in);
+	
+	int[][] Add(int [][] a,int[][] b)
+	{
+		if(a.length!=b.length||a[0].length!=b[0].length)
+		{
+			System.out.println("Order dosent match.");
+			return null;
+		}
+		
+		int c[][] = new int[a.length][a[0].length];
+		for(int i=0;i<a.length;i++)
+		{
+			for(int j=0;j<a[i].length;j++)
+			{
+				c[i][j]=a[i][j]+b[i][j];
+			}
+		}
+		return c;
+	}
+	
+	void dispMat(int [][]a)
+	{
+		for(int i=0;i<a.length;i++)
+		{
+			for(int j=0;j<a[i].length;j++)
+			{
+				System.out.print(a[i][j]+" ");
+			}
+			System.out.println();
+		}
+	}
+	
+	int[][] readMat()
+	{
+		int mat[][];
+		System.out.print("Enter the index of row and column : ");
+		int row = s.nextInt();
+		int col = s.nextInt();
+		mat = new int[row][col];
+		System.out.print("Enter the elements : ");
+		for(int i=0;i<mat.length;i++)
+		{
+			for(int j=0;j<mat[i].length;j++)
+			{
+				mat[i][j]=s.nextInt();
+			}
+		}
+		return mat;
+	}
+}

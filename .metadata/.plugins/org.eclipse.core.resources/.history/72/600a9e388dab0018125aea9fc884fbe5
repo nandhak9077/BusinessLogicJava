@@ -1,0 +1,27 @@
+
+public class AddMatrix 
+{
+	public static void main(String[] args) 
+	{
+		Matrix add = new Matrix();
+		System.out.println("Matrix A");
+		int[][] a = add.readMat();
+		System.out.println("Matrix B");
+		int[][] b = add.readMat();
+		System.out.println("The elements of Matrix A : ");
+		add.dispMat(a);
+		System.out.println("The elements of Matrix B : ");
+		add.dispMat(b);
+		System.out.println("The sum of two matrix A and B is : ");
+		int[][] r = add.Add(a,b);
+		System.out.println("The addition of matrix is : ");
+		for(int i=0;i<a.length;i++)
+		{
+			for(int j=0;j<a[i].length;j++)
+			{
+				System.out.print(r+" ");
+			}
+			System.out.println();
+		}
+	}
+}

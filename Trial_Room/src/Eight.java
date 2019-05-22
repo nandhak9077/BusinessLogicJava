@@ -1,0 +1,26 @@
+	import java.util.Scanner;
+	
+public class Eight
+{
+
+	public static void main(String[] args) 
+	{
+		Scanner s = new Scanner(System.in);
+		int[] count = new int[126];
+		System.out.print("Enter the string : ");
+		String st = s.nextLine();
+		System.out.print("The entered string is : "+st);
+		for(int i=0;i<st.length();i++)
+		{
+			char c = st.charAt(i); 
+			count[c]++;
+		}
+		System.out.println("");
+		for(int i=0;i<count.length;i++)
+		{
+			if(count[i]!=0)
+				System.out.println((char)i+" --> "+count[i]);
+		}
+		s.close();
+	}
+}

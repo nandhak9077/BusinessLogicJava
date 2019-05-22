@@ -1,0 +1,14 @@
+import java.util.Scanner;
+
+public class seven 
+{
+	public static void main(String[] args) 
+	{
+		Scanner s = new Scanner(System.in);
+		System.out.print("Enter the string with elements separated by semicolon : ");
+		String st = s.nextLine();
+		System.out.print("The entered string is : "+st);
+		
+	}
+
+}

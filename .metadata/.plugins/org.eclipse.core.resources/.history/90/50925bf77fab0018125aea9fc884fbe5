@@ -1,0 +1,14 @@
+
+public class Main3 
+{
+	public static void main(String[] args) 
+	{
+		Matrix m3 = new Matrix();
+		System.out.println("Enter the  first matrix elements : ");
+		int[][] a = m3.readMat();
+		System.out.println("Enter the  second matrix elements : ");
+		int[][] b = m3.readMat();
+		m3.dispMat(a);
+		m3.dispMat(b);
+	}
+}

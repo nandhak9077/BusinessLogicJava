@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+public class seven 
+{
+	public static void main(String[] args) 
+	{
+		Scanner s = new Scanner(System.in);
+		System.out.print("Enter the string with elements separated by semicolon : ");
+		String st = s.nextLine();
+		System.out.print("The entered string is : "+st);
+		char[] c = st.toCharArray();
+		char[] roll = new char[c.length];
+		for(int i=0;i<st.length();i++)
+		{
+			if(c[i]==';')
+			{
+				while(c[i+1]>='0' && c[i+1]<='9')
+				{
+					for(int j=0;j<c.length;j++)
+						{
+							roll[i] = c[i+1];
+							System.out.print(roll[i]+" ");
+						}
+				}
+			}
+		}
+		for(int i=0;i<roll.length;i++)
+			
+		
+	}
+
+}

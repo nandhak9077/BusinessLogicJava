@@ -1,0 +1,14 @@
+import java.util.Scanner;
+
+class seven
+{
+	public static void main(String[] args) 
+	{
+		Scanner s = new Scanner(System.in);
+		System.out.println("Enter the string : ");
+		String st = s.nextLine();
+		char[] c = st.toCharArray();
+		for(int i=0;i<c.length;i++)
+			System.out.print(c[i]+" ");
+	}
+}
